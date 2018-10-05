@@ -1,0 +1,27 @@
+what does `json: "asd"` mean?, eg:
+===================================================================================
+                                                                                                                          
+// Resource contains resource configuration                                                                                                                                    
+type Resource struct {                                                                                                                                                         
+    Deployment            bool `json:"deployment"`   
+
+in config/config.go
+
+https://stackoverflow.com/questions/30681054/what-is-the-usage-of-backtick-in-golang-structs-definition
+
+They are tags(?)
+
+https://golang.org/ref/spec#Struct_types
+
+The back quotes are used to create raw string literals which can contain any type of character:
+
+'In this case, the json:"gateway" is used by the json package to encode the value of Gateway into the key gateway in the corresponding json object.'
+
+
+https://golang.org/pkg/reflect/#StructTag
+
+A StructTag is the tag string in a struct field.
+
+By convention, tag strings are a concatenation of optionally space-separated key:"value" pairs.
+
+https://stackoverflow.com/questions/30856454/how-to-unmarshall-both-0-and-false-as-bool-from-json
